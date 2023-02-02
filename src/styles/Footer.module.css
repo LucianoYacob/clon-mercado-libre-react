@@ -1,0 +1,39 @@
+.footerContainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 10px;
+}
+
+.footerNav {
+    margin-bottom: 7px;
+}
+
+.footerList {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.listItem > a{
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+}
+
+.footerContainer > p {
+    display: block;
+    font-size: 12px;
+    margin-top: 7px;
+    margin-bottom: 0;
+    color: #999;
+}
+
+.footerContainer div > small {
+    color: #999;
+}
+

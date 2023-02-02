@@ -1,0 +1,241 @@
+.detailsContainer {
+    padding: 20px 20px 20px 5px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    width: min-content;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #bbb;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+/* Contenedor Izquierdo*/
+.leftContainer {
+    box-sizing: border-box;
+    flex-shrink: 4;
+    flex-grow: 2;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.internalLeftContainer {
+    margin-bottom: 68px;
+    width: 100%;    
+}
+
+.imgColumnContainer {
+    display: flex;
+    height: auto;
+    margin-left: 16px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.visorContainer {
+    margin-right: 25px;
+    width: 50px;
+}
+
+.visorContainer ul li{
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 0px;
+    margin-bottom: 8px;
+    list-style: none;
+    border-radius: 7px;
+    border: 1px solid #aaa;
+}
+.visorContainer ul li img {
+    border-radius: 4px;
+    object-fit: contain;
+    width: 95%;
+}
+
+.visorContainer ul li:hover {
+    border: 2px solid #3483fa;
+}
+
+.descriptionContainer {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 10px 20px;
+}
+
+.descriptionContainer > h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.descriptionContainer > p {
+    color: #666;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+
+/* Contenedor Derecho */
+.rightContainer {
+    box-sizing: border-box;
+    margin-left: 48px;
+    max-width: 368px;
+    flex-grow: 1;
+    width: 368px;
+    z-index: 1;
+    flex-shrink: 1;
+}
+
+.rightContainer > .firstChild{
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 16px;
+    width: 100%;
+}
+ 
+.firstChild > div:first-child {
+    margin-top: 0;
+}
+
+.firstChild div {
+    margin-top: 28px;
+}
+
+.titleContainer > h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    margin-right: 28px;
+    padding: 0;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.priceContainer .price {
+    color: #333;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.priceContainer span {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.stockContainer strong {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.relativeStockContainer {
+    position: relative;
+}
+
+.relativeStockContainer button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.relativeStockContainer button em {
+    font-size: 14px;
+    font-weight: 200;
+    color: #666;
+    pointer-events: none;
+}
+.relativeStockContainer button b{
+    pointer-events: none;
+}
+
+.absoluteStockContainer {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    margin: 0;
+    box-shadow: 0 0 2px #999;
+    width: 70%;
+    top: 10px;
+    left: 10px;
+}
+
+.listUnits {
+    background-color: #fff;
+    list-style: none;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.listUnits li {
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    display: flex;
+    padding: 14px 16px;
+    color: #333;
+    height: 48px;
+    font-weight: 400;
+}
+
+.listUnits li:hover {
+    background-color: #efefef;
+}
+
+.activeLi { 
+    color: #3483fa !important;
+    font-weight: 600 !important;
+}
+
+.activeLi::before { 
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: #3483fa;
+    top: 0;
+    left: 0;
+}
+
+.buyNowBtn {
+    background-color: #3483fa;
+    color: #fff;
+}
+
+.addToCartBtn {
+    background-color: rgba(65,137,230,.15);
+    border-color: transparent;
+    color: #3483fa;
+}
+.buyNowBtn:hover {
+    background-color: #3174d8;;
+}
+
+.addToCartBtn:hover {
+    background-color: rgba(17, 35, 59, 0.15);
+}
+
+.buyNowBtn, .addToCartBtn {
+    width: 100%;
+    margin-top: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 0 #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    padding: 0 24px;
+    text-align: center;
+    border: none;
+    transition: .3s ease-out background-color;
+}

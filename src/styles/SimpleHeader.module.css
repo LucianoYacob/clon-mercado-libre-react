@@ -1,0 +1,14 @@
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+.icon {
+    display: inline-block;
+    cursor: pointer;
+}

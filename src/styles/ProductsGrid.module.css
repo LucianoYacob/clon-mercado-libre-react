@@ -1,0 +1,123 @@
+.results {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    flex-grow: 2;
+}
+
+.viewOptionsContainer {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.viewOptionsContainer > div {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    height: 24px;
+}
+
+.viewOptionsSpanC{
+    color: #333;
+    text-align: right;
+    margin-right: 6px;
+    font-size: 14px;
+    font-weight: 600;    
+}
+
+.viewOptionsBtn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.viewOptionsBtn > span {
+    color: #333;
+    font-size: 14px;
+    font-weight: 200;
+    pointer-events: none;
+}
+
+.optionsContainer {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: translate(-20px, 10px);
+    margin: 0px;
+    padding: 0;
+    overflow-y: hidden;
+    width: auto;
+    z-index: 1000;
+}
+
+.optionsContainer > div {
+    box-sizing: border-box;
+    min-width: 135px;
+    text-align: right;
+}
+
+.optionsList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 14px;
+    list-style: none;
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+    text-align: right;
+}
+
+.option {
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 13px 0 13px 16px;
+    width: 100%;
+}
+
+.option:hover::before {
+    content: "";
+    position: absolute;
+    border-left: 6px solid #3483fa99;
+    bottom: 2px;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.optionClicked::before,
+.optionClicked:hover:before {
+    content: "";
+    position: absolute;
+    border-left: 6px solid #3483fa;
+    bottom: 2px;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.optionClicked {
+    font-weight: 600;
+    color: #3483fa;
+}
+
+.option:hover {
+    color: #3483fa;
+    /* font-weight: 600; */
+    font-size: 14px;
+}
+
+.productsContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 275px);
+    justify-content: space-between;
+    gap: 20px 0;
+    padding-top: 24px;
+    padding-left: 0;
+}

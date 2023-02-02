@@ -1,0 +1,30 @@
+.wrapper_1600px,
+.wrapper_1200px {
+    margin: auto;
+    overflow: hidden;
+}
+
+.wrapper_1600px {
+    max-width: 1600px;
+}
+
+.wrapper_1200px{
+    max-width: 1250px;
+}
+
+.ofertas {
+    width: 100%;
+    min-height: fit-content;
+}
+
+.listContainer {
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: auto;
+    /* overflow: visible; */
+    height: 500px;
+}
+
+.listContainer > h2 {
+    margin: 0 0 22px 8px;
+}

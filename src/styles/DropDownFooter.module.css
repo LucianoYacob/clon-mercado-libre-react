@@ -1,0 +1,73 @@
+.menuAccess {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    height: 235px;
+    transition: .3s ease-out all;
+}
+
+.menuAccess > label {
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 1px);
+    bottom: 100%;
+    z-index: 5;
+    background-color: #f7f7f7;
+    color: #666;
+    border-radius: 5px 5px 0 0;
+    padding: 0 20px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    height: 32px;
+    line-height: 32px;
+}
+.iconAccess {
+    display: inline-block;
+    position: relative;
+    content: "";
+    pointer-events: none;
+    width: 6px;
+    height: 6px;
+    border: solid #666;
+    border-width: 0px 3px 3px 0px;
+    margin: 0px 0 2px 11px;
+    transition: .3s ease-in transform;
+}
+.iconAccess.collapse {
+    transform: rotate(-135deg);
+} 
+
+.iconAccess.noCollapse {
+    transform: rotate(45deg);
+}
+
+.menuAccessContent {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menuAccessCol {
+    margin: 46px 0;
+}
+
+.menuAccessCol > h3 {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.menuAccessList {
+    list-style: none;
+}
+
+.menuAccessItem > a {
+    font-size: 14px;
+    color: #999;
+    line-height: 22px;
+}

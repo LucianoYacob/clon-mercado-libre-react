@@ -1,0 +1,72 @@
+.asideSlideBar {
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    max-width: 294px;
+    min-width: 210px;
+    padding-right: 15px;
+    flex-grow: 1;
+}
+
+.asideSlideBar > h1 {
+    color: #333;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.asideSlideBar > span {
+    color: #333;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.contentFilter {
+    margin-bottom: 30px;
+    padding-right: 15px;
+}
+
+.contentFilter > h2 {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.contentFilter > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.optionItem {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.inputPrice {
+    box-sizing: border-box;
+    background-color: #fafafa;
+    border-color: #888;
+    border-radius: 0.37em;
+    font-size: 13px;
+    height: 25px;
+    width: 84px;
+    border-width: 1px;
+    padding: 0.2em 0.7em;
+    line-height: 22px;
+    margin: 8px 0 4px;
+}
+
+.inputPrice:focus {
+    outline: 0;
+}
+
+.inputPrice::-webkit-inner-spin-button,
+.inputPrice::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}

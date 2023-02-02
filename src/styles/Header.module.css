@@ -1,0 +1,166 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
+
+.headerUp {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+.headerUp > a { 
+    width: auto;
+}
+
+.headerDown{
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.headerDown > div {
+    flex-grow: 1;
+}
+.headerDown > div:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.containerUbication {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.containerUbication > svg {
+    position: absolute;
+    top: 0;
+}
+
+.containerTextUbication {
+    padding-left: 29px;
+    line-height: 14px;
+}
+
+.containerTextUbication > p {
+    font-size: 12px;
+    color: rgba(51,51,51,.6);
+    margin: 0;
+}
+
+.containerTextUbication > span {
+    font-size: 14px;
+    padding: 0;
+}
+
+div > ul {
+    padding: 0;
+    margin: 0;
+}
+
+.firstMenu {
+    list-style: none;
+    vertical-align: center;
+}
+
+.firstMenu li:first-child {
+    position: relative;
+}
+
+.firstMenu > li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(51,51,51,.6);
+}
+
+.firstMenu > li > a {
+    color: rgba(51,51,51,.6);
+}
+.firstMenu > li > a:visited {
+    color: rgba(51,51,51,.6);
+}
+
+.firstMenu > li > a:hover,
+.userList > li > a:hover,
+.notificationButton > svg:hover {
+   color: #333333e6;
+}
+
+.userList{
+    display: inline-block;
+    list-style: none;
+}
+
+.userList > li {
+    display: inline;
+}
+.userList > li > a, .userList > li > span {
+    font-size: 14px;
+    color: rgba(51,51,51,.7);
+    margin-right: 20px;
+    font-weight: 400;
+}
+
+.categories {
+    position: relative;
+}
+
+.categoriesSpan {
+    cursor: default;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(51,51,51,.6);
+}
+
+.categoriesSpan::after {
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    position: relative;
+    transform: rotate(45deg);
+    width: 6px;
+    color: rgba(0,0,0,.3);
+    margin: 8px 0 0 6px;
+    vertical-align: top;
+    will-change: transform;
+}
+
+
+.userList > li:last-child > a {
+    margin-right: 0;
+}
+.userList > li:first-child > a {
+    margin-left: 20px;
+}
+
+.notificationButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgba(51,51,51,.7);
+    margin-right: 20px;
+}
+
+.mouseOverHelper{
+    position: absolute;
+    background-color: transparent;
+    height: 100px;
+    width: 270px;
+    left: -76px;
+}

@@ -1,0 +1,67 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.form > h1, .form > h2{
+    font-size: 1.6rem;
+}
+
+.formRegister {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 25px 45px;
+    border-radius: 5px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    max-width: 250px;
+}
+
+.formGroup > label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.formGroup > input {
+    border: none;
+    margin-bottom: 2px;
+    outline: none;
+    padding: 5px 6px;
+    box-shadow: 0px 0px 5px rgb(97, 96, 96);
+}
+
+.formGroup > input:focus {
+    outline: 1px solid #999;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    width: min-content;
+    padding: 5px 10px;
+    align-self: center;
+    margin-top: 5px;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px rgb(97, 96, 96);
+}
+
+.btn:active {
+    outline: none;
+    background-color: #efefef;
+    box-shadow: 0px 0px 8px rgb(88, 88, 88);
+}
+
+.ingresarBbtn {
+    cursor: pointer;
+} 

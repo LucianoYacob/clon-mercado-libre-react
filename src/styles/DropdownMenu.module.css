@@ -1,0 +1,37 @@
+.dropdownMenu {
+    position: absolute;
+    min-width: 220px;
+    list-style: none;
+    background-color: #333;
+    padding: 22px 0;
+    top: 41px;
+    left: -76px;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+.dropdownMenu::before {
+    position: absolute;
+    display: block;
+    content: "";
+    border: 0 solid transparent;
+    border-right-width: 14px;
+    border-left-width: 14px;
+    border-bottom: 14px solid #333;
+    top: -8px;
+    left: 137px;
+}
+
+.dropdownMenu li > a {
+    display: block;
+    color: #fff;
+    line-height: 2.59;
+    padding: 0 36px;
+    white-space: nowrap;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.dropdownMenu li > a:hover {
+   background-color: #3483fa;
+}
