@@ -1,3 +1,12 @@
+mercado_libre_clon
+Clone of the MercadoLibre application created for teaching and learning purposes, (not functional for purchases) with reduced functionalities, fully built with React, using ReactRouter to manage routes, and an external api in charge of storing the data of the fake store (fakeapi.platzi/fakeStoreApi).
+
+This app was built just using React with reactRouter, JSX, and CSS.
+
+Clon de la aplicación de MercadoLibre, creada con fines didácticos y de aprendizaje, (no funcional para compras) con funcionalidades reducidas. Construida plenamente con React, haciendo uso de ReactRouter para el manejo de rutas, y una API externa encargada de almacenar los datos de la fake store (fakeapi.platzi / fakeStoreApi).
+
+Esta APP fue creada usando unicamente React con reactRouter, JSX y CSS.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
