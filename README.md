@@ -1,4 +1,5 @@
-mercado_libre_clon
+# mercado_libre_clon
+
 Clone of the MercadoLibre application created for teaching and learning purposes, (not functional for purchases) with reduced functionalities, fully built with React, using ReactRouter to manage routes, and an external api in charge of storing the data of the fake store (fakeapi.platzi/fakeStoreApi).
 
 This app was built just using React with reactRouter, JSX, and CSS.
