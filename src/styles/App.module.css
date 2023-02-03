@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    height: 100px;
+    height: max-content;
     background-color: #fff159;
     padding: 6px 0 0 0;
 }

@@ -1,4 +1,5 @@
 .asideSlideBar {
+    display: block;
     box-sizing: border-box;
     flex-wrap: wrap;
     max-width: 294px;
@@ -43,6 +44,7 @@
     font-weight: 300;
     margin-bottom: 5px;
     cursor: pointer;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -69,4 +71,10 @@
 {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .asideSlideBar {
+        display: none;
+    }
 }
