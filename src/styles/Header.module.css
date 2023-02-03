@@ -166,6 +166,15 @@ div > ul {
     left: -76px;
 }
 
+.iconCart {
+    position: relative;
+}
+
+.amountBuy {
+    position: absolute;
+    bottom: 15px;
+}
+
 /* Header Mobile */
 
 .headerUpM {

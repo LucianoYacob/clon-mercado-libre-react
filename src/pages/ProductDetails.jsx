@@ -1,11 +1,14 @@
 import { useParams } from "react-router-dom";
 import  get  from "../utilities/httpClient";
 import styles from "../styles/ProductDetails.module.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useRef } from "react";
+import { CartContext } from "../contexts/ShoppingCartContext";
 
-export default function ProductDetails(params) {
+export default function ProductDetails() {
     const { productId } = useParams();
+
+    const [cart, setCart] = useContext(CartContext);
 
     const $stockBox = useRef(null);
     const $stockBtn = useRef(null);
@@ -65,6 +68,44 @@ export default function ProductDetails(params) {
         setFirstImage(img);
     } 
 
+    const addToCart = () => {
+        setCart((currentItems) => {
+            const isItemsFound = currentItems.find((item) => item.id === product.id);
+
+            if(isItemsFound){
+                return currentItems.map(item => {
+                    if(item.id === product.id){
+                        return {...item, quantity: item.quantity + 1}
+                    }
+                    else{
+                        return item;
+                    }
+                })
+            }
+            else {
+                return [...currentItems, { id: product.id, quantity: 1, price: product.price }];
+            }
+        });
+    }
+
+    const removeItem = (id) => {
+        setCart((currentItems) => {
+            if(currentItems.find(item => item.id === product.id)?.quantity === 1){
+                return currentItems.filter((item) => item.id !== id);
+            }
+            else {
+                return currentItems.map(item => {
+                    if(item.id === product.id){
+                        return {...item, quantity: item.quantity - 1}
+                    }
+                    else {
+                        return item;
+                    }
+                })
+            }
+        });
+    }
+
     return (
     <div className={styles.detailsContainer}>
         <div className={styles.internalContainer}>
@@ -89,6 +130,7 @@ export default function ProductDetails(params) {
                     </div>
                 </div>
 
+                {/* Contenedor derecha */}
                 <div className={styles.rightContainer}>
                     <div className={styles.firstChild}>
                         <div className={styles.titleContainer}>
@@ -124,7 +166,7 @@ export default function ProductDetails(params) {
                         <div className={styles.buttonsContainer}>
                             <div>
                                 <button className={styles.buyNowBtn}>Comprar ahora</button>
-                                <button className={styles.addToCartBtn}>Agregar al carrito</button>
+                                <button className={styles.addToCartBtn} onClick={(e) => addToCart()}>Agregar al carrito</button>
                             </div>
                         </div>
                     </div>

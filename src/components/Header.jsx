@@ -6,15 +6,21 @@ import { GoThreeBars } from "react-icons/go";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import styles from "../styles/Header.module.css";
 import { DropdownMenu } from "./DropdownMenu";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { useOnHoverOutside } from "../hooks/useOnHoverOutside";
 import get from "../utilities/httpClient";
+import { CartContext } from "../contexts/ShoppingCartContext";
 
 export function Header({ user, setUser }) {
   const dropdownRef = useRef(null);
   const [isMenuDropDownOpen, setIsMenuDropDownOpen] = useState(false);
   const [isMenuDropDownOpenMobile, setIsMenuDropDownOpenMobile] =
     useState(false);
+
+  const [cart, setCart] = useContext(CartContext);
+  const quantity = cart.reduce((acc, el) => {
+    return acc + el.quantity
+  }, 0);
 
   const [categories, setCategories] = useState([]);
 
@@ -122,9 +128,10 @@ export function Header({ user, setUser }) {
                   <VscBell size={22} />
                 </button>
               </li>
-              <li>
-                <Link>
+              <li className={styles.iconCart}>
+                <Link to={"/cart"}>
                   <AiOutlineShoppingCart size={22} />
+                  <span className={styles.amountBuy}>{quantity}</span>
                 </Link>
               </li>
             </ul>
@@ -158,9 +165,10 @@ export function Header({ user, setUser }) {
                 <GoThreeBars size={25} color="#333333dd" />
               </button>
             </div>
-            <div className={styles.headericonContainerM}>
-              <Link to="/">
+            <div className={`${styles.headericonContainerM} ${styles.iconCart}`}>
+              <Link to={"/cart"}>
                 <AiOutlineShoppingCart size={25} color="#333333dd" />
+                <span className={styles.amountBuy}>{quantity}</span>
               </Link>
             </div>
           </div>

@@ -9,29 +9,35 @@ import LoginRegisterPage from "./pages/LoginRegisterPage";
 import { useEffect, useState } from "react";
 import SimpleHeader from "./components/SimpleHeader";
 import ProductDetails from "./pages/ProductDetails";
+import ShoppingCart from "./components/ShoppingCart";
+import ShoppingCartProvider from "./contexts/ShoppingCartContext";
 
 export function App() {
   const [userName, setUserName] = useState("");
   const [inAccesPage, setInAccesPage] = useState(false);
 
   return (
-    <Router>
-        <header className={styles.header}>
-          {inAccesPage ? <SimpleHeader /> : <Header user={userName} setUser={setUserName}/>}
-        </header>
-        <main className={styles.main}>
-          <Routes>
-            <Route path="/products/:productId" element={ <ProductDetails /> } />
-            <Route path="/register" element={<LoginRegisterPage setAccess={setInAccesPage}/>} />
-            <Route path="/login" element={<LoginRegisterPage setUser={setUserName} setAccess={setInAccesPage} />} />
-            <Route path="/products" element={<SearchPage />} />
-            <Route path="/" element={<HomePage setAccess={setInAccesPage} />} />
-          </Routes>
-        </main>
-        {inAccesPage || <DropDownFooter />}
-        <footer className={styles.footer}>
-          {inAccesPage || <Footer />}
-        </footer>
-    </Router>
+
+    <ShoppingCartProvider>
+      <Router>
+          <header className={styles.header}>
+            {inAccesPage ? <SimpleHeader /> : <Header user={userName} setUser={setUserName}/>}
+          </header>
+          <main className={styles.main}>
+            <Routes>
+              <Route path="/cart" element={ <ShoppingCart /> } />
+              <Route path="/products/:productId" element={ <ProductDetails /> } />
+              <Route path="/register" element={<LoginRegisterPage setAccess={setInAccesPage}/>} />
+              <Route path="/login" element={<LoginRegisterPage setUser={setUserName} setAccess={setInAccesPage} />} />
+              <Route path="/products" element={<SearchPage />} />
+              <Route path="/" element={<HomePage setAccess={setInAccesPage} />} />
+            </Routes>
+          </main>
+          {inAccesPage || <DropDownFooter />}
+          <footer className={styles.footer}>
+            {inAccesPage || <Footer />}
+          </footer>
+      </Router>
+    </ShoppingCartProvider>
   );
 }
