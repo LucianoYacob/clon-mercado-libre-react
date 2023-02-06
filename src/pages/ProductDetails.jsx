@@ -83,7 +83,7 @@ export default function ProductDetails() {
                 })
             }
             else {
-                return [...currentItems, { id: product.id, quantity: 1, price: product.price }];
+                return [...currentItems, { id: product.id, quantity: 1, price: product.price, image: product.images[0], title: product.title }];
             }
         });
     }
