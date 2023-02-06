@@ -6,10 +6,6 @@ export default function ShoppingCart() {
     const [cart, setCart] = useContext(CartContext);
     const inputQuantity = useRef(null);
 
-    // const getQuantityById = ("algun id") => {
-    //     return cart.find(item => item.id == "algun id")?.quantity || 0;
-    // }
-
     const quantity = cart.reduce((acc, el) => {
         return acc + el.quantity;
     }, 0);
